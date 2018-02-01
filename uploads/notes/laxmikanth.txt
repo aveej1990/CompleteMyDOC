@@ -1,0 +1,9 @@
+Timesheet pending tasks :
+
+1 . Project Manager can approve the task : 
+
+                                  -> Employee have added the task for particular manager it will show to manager's block then manager can approve the task it will show the  " Report Log and serach Timesheet Log and also export ".
+
+                                     -> Employee can added the task Project manager can receive the email .
+
+***  I have changed status field  Active , Inactive changed to  Approved and Unapproved --> table name is   emp_record_details
