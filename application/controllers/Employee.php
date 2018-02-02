@@ -28,7 +28,7 @@ class Employee extends CI_Controller {
 		// Load form validation library
 		$this->load->library('form_validation');
 		// Load session library
-		$this->load->library('session');
+		$this->load->library('session');	
 		// Load database
 		 
 		$this->load->model('timesheet_login');
@@ -62,6 +62,22 @@ class Employee extends CI_Controller {
 		endif;	   
 			
 	 
+	}
+	public function dontadd()
+	{
+		 
+	   if(empty($empId)) : 
+			
+			 $this->load->view('employee/add_employees');
+			 
+		else:
+			
+			   $data['updateEmployee'] = $this->timesheet_login->getEmployees($empId);
+	
+		    	$this->load->view('employee/add_employees' , $data);
+					
+		endif;	   
+			
 	}
 	
 	public function addEmployee(){
