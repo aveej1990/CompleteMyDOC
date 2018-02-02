@@ -66,7 +66,7 @@ class Employee extends CI_Controller {
 	public function dontadd()
 	{
 		 
-	   if(empty($empId)) : 
+	   if(empty($empId) && $empId1=='') : 
 			
 			 $this->load->view('employee/add_employees');
 			 
