@@ -66,17 +66,20 @@ class Employee extends CI_Controller {
 	public function dontadd()
 	{
 		 
-	   if(empty($empId) && $empId1=='') : 
+	   if(empty($empId) && $empId1=='') {
 			
 			 $this->load->view('employee/add_employees');
+	   }
 			 
-		else:
+		else
+		{
 			
 			   $data['updateEmployee'] = $this->timesheet_login->getEmployees($empId);
 	
 		    	$this->load->view('employee/add_employees' , $data);
+		}
 					
-		endif;	   
+	    
 			
 	}
 	
